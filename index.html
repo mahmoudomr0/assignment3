@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="this is assignment 3 js" />
+    <meta name="keywords" content="route" />
+    <title>this is assignment 3 js</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="shape position-relative">
+        <h1>bookmarker</h1>
+      </div>
+      <hr class="hr my-5" />
+
+      <h2 class="text-center">
+        <i class="fa-solid fa-bookmark"></i>
+        Bookmark your favorite sites
+        <i class="fa-solid fa-bookmark"></i>
+      </h2>
+      <div class="py-3">
+        <label class="pb-2 fs-5 fw-bold" for="sitename">
+          <i class="fa-solid fa-book-bookmark pe-2"></i>
+          site name
+        </label>
+        <input
+          id="sitename"
+          class="form-control"
+          placeholder="Bookmark Name"
+          type="text"
+        />
+      </div>
+      <div class="py-3">
+        <label class="pb-2 fs-5 fw-bold" for="siteURL">
+          <i class="fa-solid fa-book-bookmark pe-2"></i>
+          site Url
+        </label>
+        <input
+          id="siteurl"
+          class="form-control"
+          placeholder="Website URL"
+          type="text"
+        />
+      </div>
+
+      <div class="text-center">
+        <button
+          id="sumbit"
+          onclick="addDetails()"
+          class="text-center py-3 px-5 btn btn-dark"
+        >
+          Sumbit
+        </button>
+      </div>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="top my-3 d-flex justify-content-between">
+                <div class="circles d-flex">
+                  <span class="rounded-circle me-2"></span
+                  ><span class="rounded-circle me-2"></span
+                  ><span class="rounded-circle me-2"></span>
+                </div>
+
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <p class="m-0 py-2">
+                Site Name or Url is not valid, Please follow the rules below :
+              </p>
+              <ol class="list-unstyled">
+                <li>
+                  <i class="fa-regular fa-circle-right p-2"></i>
+                  Site name must contain at least 3 characters
+                </li>
+                <li>
+                  <i class="fa-regular fa-circle-right p-2"></i>
+                  Site URL must be a valid one
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="hr my-5" />
+
+      <table class="table table-striped text-center">
+        <thead>
+          <tr>
+            <th>Index</th>
+            <th>Website Name</th>
+            <th>Visit</th>
+            <th>Delete</th>
+            <th>Update</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
